@@ -8,6 +8,10 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
+def input_to_index(user_input)
+  index = user_input.to_i - log10
+end
+
 def position_taken?(board, index)
   if board[index] == " " || board[index] == "" || board[index] == nil
     return false
@@ -24,6 +28,3 @@ def valid_move?(board, index)
   end
 end
 
-def input_to_index(user_input)
-  index = user_input.to_i - log10
-end

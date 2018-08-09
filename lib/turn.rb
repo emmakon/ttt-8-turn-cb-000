@@ -5,18 +5,18 @@ def display_board(board)
  
 end
 
-def position_taken?(index, board)
-  if board[index] == "" || board[index] == " " || board[index] == NIL
+def position_taken?(board, index)
+  if board[index] == " " || board[index] == "" || board[index] == nil
     return false
   else
     return true
   end
 end
 
-def valid_move?
-  if position_taken?
+def valid_move?(board, index)
+  if position_taken?(board, index) == false && index.between?(0,9)
+    return true
+  else 
     return false
-  else
-    return true else
   end
 end
